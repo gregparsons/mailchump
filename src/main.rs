@@ -21,8 +21,7 @@ fn main() {
                    "from_me@example.com",
                    "From Me",
                    vec![
-                       ("Jane Doe".to_string(), "jane@example.com".to_string()),
-                       ("James Smith".to_string(), "james@test.com".to_string()),
+                       ("James Smith".to_string(), "test@example.com".to_string()),
                    ]
         )
     );
@@ -48,7 +47,7 @@ async fn send_email(
     // Connect to an SMTP relay server over TLS and
     // authenticate using the provided credentials.
     Transport::new(server)
-        .port(2525)
+        .port(25)
         // .credentials(username, password)
         // .connect_tls()
         .connect()
